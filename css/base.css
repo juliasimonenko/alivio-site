@@ -1,0 +1,68 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400px;
+    font-size: 20px;
+    color: #424242;
+    line-height: 1.5;
+    /* min-width: 1600px; вот добавляем ширину, если нет времени адаптировать */ 
+}
+@media (max-width: 991px) {
+    .body{
+        font-size: 18px;
+    }
+}
+
+
+/* utility дополнительные классы, которые полезные*/
+
+/* этот класс будет делать преоритет диспле none */
+.none {
+    display: none !important;
+}
+
+/* делает элемент скрытым на странице (он по прежднему остается в разметке, но не виден на экране)*/
+
+.visually-hidden {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 0px;
+    display: block;
+    margin-left: -10000px;
+    background: transparent;
+    font-size: 0;
+}
+
+/* Grid - элементы сетки на странице */
+
+/* все эти свойства в целом выстраивают контейнер по центру */
+.container {
+    width: 1400px; /*сам контейнер 1370, но мы должны учесть отступы с каждой стороны*/
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* прописываем свойства, если нет макета для устройств других, чтобы все адаптировалось адекватно */
+/* если контейнер меньше, чем 1400px, то мы переопределяем ширину */
+@media (max-width: 1399px) {
+    .container {
+        width: 100%;
+    }
+}
+
+.container container-wide {
+    width: 1506px;
+}
+
+@media (max-width: 1535px) {
+    .container container-wide {
+        width: 100%;
+    }
+}
+
+/* чтобы бургер не улетал после нажатия */
+.no-scroll {
+    overflow: hidden;
+}

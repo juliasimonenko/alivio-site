@@ -1,0 +1,38 @@
+/* стилизуем кнопку, прописываем кнопку и класс ссылки */
+.button, a.button {
+    display: inline-block;
+
+    height: 51px; /*высота не сработала, потому что ссылка это инлайн элемент и надо это изменить, сверху изменяе на инлайн-блок*/
+    line-height: 51px; /*одновременно с выстой мы указываем это, чтобы внутри кнопки все по центру стало*/
+
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #01996D;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 4px;
+    transition: opacity 0.2s ease;
+}
+.button:hover, a.button:hover {
+    opacity: 0.8;
+    color: #fff;
+}
+
+.btn-big, a.btn-big {
+    min-height: 65px;
+    line-height: 65px;
+}
+
+@media (max-width: 991px) {
+    .button, a.button {
+        min-height: 41px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .btn-big, a.btn-big{
+        min-height: 55px;
+    }
+
+}

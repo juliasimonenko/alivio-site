@@ -1,0 +1,46 @@
+.footer {
+    background-color: #245852;
+    color: #fff;
+    padding-top: 104px;
+    padding-bottom: 144px;
+}
+
+
+.footer-logo+* {
+    margin-top: 74px;
+}
+
+.footer-nav {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.footer-nav li+li {
+    margin-top: 60px;
+}
+
+.footer-nav a {
+    transition: opasity 0.2s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 0.8;
+}
+
+
+
+@media (max-width: 500px) {
+    .footer {
+        padding: 40px 0 60px;
+    }
+    .footer-logo {
+        margin-top: 40px;
+    }
+    .footer-nav {
+        font-size: 18px;
+    }
+    .footer-nav li + li {
+        margin-top: 30px;
+    }
+}
+

@@ -1,0 +1,101 @@
+.header {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.header-row {
+    display: flex;
+    align-items: center; /*это чтобы были по центру*/
+    /* justify-content: space-between; раскидаем по разным сторонам */
+    /* т.к. все таки они не п середине, надо изменитьб */
+}
+
+
+
+.header-nav {
+    /* добавляем отступ от логотипа */
+    margin-left: 172px;
+    font-weight: 500;
+    color: #292929;
+}
+
+/* выстраиваем в строку */
+.header-nav ul {
+    display: flex;
+}
+
+/* добавляем отступы */
+/* .header-nav ul li {
+    margin-right: 70px; /*это отступы для всех ,но у последнего его не должно быть*/
+/* }  */ 
+
+/* удаляем оступ для последнего */
+/* .header-nav ul li:last-child {
+    margin-right: 0;
+} */
+
+
+/* А еще это можно сделать вначале */
+.header-nav ul li:not(:last-child) {
+    margin-right: 70px;
+}
+/* А еще можно так */
+/* .header-nav li + li {
+    margin-left: 70px;
+} */
+/* то есть у всех кроме первой отступ влево */
+
+/* изменим цвет ссылок при наведении и скорость изменения цвета*/
+.header-nav a {
+    transition: color 0.2s ease;
+}
+.header-nav a:hover {
+    color: #01996D;
+}
+
+
+/* Надо сделать отстпы между кнопками */
+/* обращаемся к header-login зачем к элементу, котоый лежит внутри него и его правому соседу> * + * */
+
+/* прижмем кнопки к правой сторое */
+.header-login {
+    margin-left: auto;
+}
+.header-login > * + * {
+    margin-left: 35px;
+}
+.header-login a {
+    margin-top: -1;
+    color: black;
+    transition: color 0.2s ease;
+}
+.header-login a:hover {
+    color: #01996D;
+}
+
+
+/* мы делаем так, чтобы при ширине меньше 1200 уменьшались отступы между ссылками в шапке */
+
+@media (max-width: 1199px) {
+    .header-row {
+        justify-content: space-between;
+    }
+    
+    .header-nav {
+        margin-left: 30px;
+    }
+    .header-nav li + li {
+        margin-left: 50px;
+    }
+    .header-login {
+        margin-left: 30px;
+    }
+}
+
+/* Далее надо скрыть часть навигации при уменьшении на 991px экрана */
+@media (max-width: 991px) {
+    .header-nav, .header-login {
+        display: none;
+    }
+}

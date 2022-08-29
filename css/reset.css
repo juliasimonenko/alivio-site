@@ -1,0 +1,102 @@
+/* reset and base styles */
+/* Через * мы выбираем вообще все элементы и бефор и афтер и убираем все все отступы  */
+*, 
+*::before, 
+*::after {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box; /*бордер бокс для того, чтобы финальная ширина и высота, которую мы пропишем уже включала в себя и рамку и паддинги и контент*/
+}
+
+/* ссылки и посещенные ссылки*/
+
+a, a:visited {
+    color: inherit; /*никак не выделяются*/
+    text-decoration: none; /*убираем подчеркивание*/
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* по фокусу поведение ссылок */
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+/* common, выбираем все семантические теги html5,  */
+
+aside, nav, footer, header, section, main {
+    display: block;
+}
+
+/* Сбросы для заголовков и абзацей */
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit; /*inherit(наследует от того блока, в котором он находится) означает, что останется то же, что мы укажем в боди*/
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+/* p и абзац, который идет после него */
+p + p {
+    margin-top: 1em;
+}
+
+/* сбросим те кружочки, маркеры */
+
+ul {
+    list-style: none;
+}
+
+img, svg {
+    vertical-align: top; /*убирает отступ снизу у img , т.л. он есть по стандарту*/
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* сбросы для form просто для примера, в этом макете у нас их нет */
+
+input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* крестик в браузере, когда мы что-то вводим */
+input::-ms-clear {
+    display: none;
+}
+
+/* наши кнопки */
+button, input[type='submit'] {
+    display: inline-block; /*делаем в одну линию, чтобы их можно было просто заверстать*/
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer; /*обязательно, чтобы на кнопки реагировал палец и появлялся */
+}
+
+/* работаем со всеми input */
+input:focus, input:active, button:focus, button:active {
+    outline: none;
+}
+/* для браузера mozila */
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/* label это тоже элементы форм */
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}

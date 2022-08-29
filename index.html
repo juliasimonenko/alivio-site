@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- если нет времени адаптировать под мобилку, то строчку ниж комментируем, а в базе устанавливаем минимальную ширину -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alivio HTML project</title>
+    <!-- Reset -->
+    <link rel="stylesheet" href="../alivio-html-project/css/reset.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/base.css">
+    <!-- Blocks кстати их нельзя менять местами, хедер должен быть перед кнопками, иначе он потеряет свое влияние, но лучше давать и ссылкам класс отдельный, чтобы точно ничего не поломалось-->
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/header.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/btn.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/home.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/how-it-works.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/story.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/product.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/card.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/avatar.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/footer.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/mobile-nav-button.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/blocks/mobile-nav.css">
+
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../alivio-html-project/css/Georgia/stylesheet.css">
+    <link rel="stylesheet" href="../alivio-html-project/css/Lato/stylesheet.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-row">
+                <div class="header-logo"><img src="../alivio-html-project/img/logo.svg" alt="logo"></div>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="#">Why Alivio</a></li>
+                        <li><a href="#">Solution</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </nav>
+                <div class="header-login">
+                    <a href="#">Sign in</a>
+                    <a href="#" class="button"> Start Trial</a>
+
+                    <!-- Ссылки обычно ведут нас на другие страницы, а кнопка выполянет какую то операцию на это странице, например, при нажатии вызывает модальное окно -->
+
+                </div>
+
+                <!-- создаем бургер для исчезающего меню (кстати это заготовка)-->
+
+                <button type="button" class="mobile-nav-button">
+                    <span class="mobile-nav-button__icon"></span>
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- делаем выезжающую навигацию, необходимо завесткать ее отдельно -->
+
+    <div class="mobile-nav">
+        <img class="mobile-nav-logo" src="../alivio-html-project/img/logo.svg" alt="logo">
+
+
+        <nav class="mobile-nav-list">
+            <ul>
+                <li><a href="#">Why Alivio</a></li>
+                <li><a href="#">Solution</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+        </nav>
+
+        <div class="mobile-login">
+            <a href="#">Sign in</a>
+            <a href="#" class="button btn-big"> Start Trial</a>
+
+        </div>
+    </div>
+
+
+    <main>
+        <section class="home">
+            <div class="container">
+                <div class="home-content">
+                    <h1 class="home-heading">Be aware,
+                        Manage well.</h1>
+                    <div class="home-text">
+                        <p>Everyone experiences stress in different ways. Let Alivio guide you, in a personalized
+                            journal experience, to overcome your stress.</p>
+                    </div>
+                    <div class="home-button">
+                        <a href="#" class="button btn-big">Find Your Way</a>
+                    </div>
+                </div>
+            </div>
+            <div class="home-bg-img">
+                <img src="../alivio-html-project/img/home/BG.jpg" alt="background">
+            </div>
+        </section>
+
+
+        <section class="how-it-works">
+            <div class="container">
+                <div class="how-it-works-header">
+                    <div class="how-it-works-header-head">
+                        <h2 class="how-it-works-title">How it works</h2>
+                        <h3 class="how-it-works-subtitle">Understand & Release the stress in 3 steps</h3>
+                    </div>
+                    <div class="how-it-works-header-content">
+                        <p>Alivio offers as many journals it takes, tackling different areas such as anxiety,
+                            overwhelmedness, sadness, or anger, and a variety of personal causes, to help you become
+                            aware of your emotions, and guide you in how to manage stress.</p>
+                    </div>
+                </div>
+                <div class="how-it-works-steps">
+                    <div class="step">
+                        <!-- цифру 01 мы пропишем через псевдоэлемент, дата атрибут -->
+                        <h4 class="step-heading" data-number="01">Personalize</h4>
+
+                        <div class="step-text">
+                            <p>
+                                Answer a quick survey about how you express yourself, what causes you stress, and what
+                                area would you like to work on. This way, we can fully personalize your journal!
+                            </p>
+                        </div>
+
+                        <div class="step-img-wrapper">
+                            <img class="step-img" src="../alivio-html-project/img/steps/01.jpg" alt="step img">
+                        </div>
+
+                    </div>
+                    <!-- //step -->
+                    <div class="step">
+                        <!-- цифру 02 мы пропишем через псевдоэлемент, дата атрибут -->
+                        <h4 class="step-heading" data-number="02">Write & Understand</h4>
+
+                        <div class="step-text">
+                            <p>
+                                Write, draw, reflect, understand. Alivio will guide you through the prompts and will
+                                help you manage your stress!
+                            </p>
+                        </div>
+
+                        <div class="step-img-wrapper">
+                            <img class="step-img" src="../alivio-html-project/img/steps/02.jpg" alt="step img">
+                        </div>
+
+                    </div>
+                    <!-- //step2 -->
+                    <div class="step">
+                        <!-- цифру 03 мы пропишем через псевдоэлемент, дата атрибут -->
+                        <h4 class="step-heading" data-number="03">Alivio!</h4>
+
+                        <div class="step-text">
+                            <p>
+                                Now you are aware, and have a way to manage and overcome your own stress.What are you
+                                waiting for? Alivio today!
+                            </p>
+                        </div>
+
+                        <div class="step-img-wrapper">
+                            <img class="step-img" src="../alivio-html-project/img/steps/03.jpg" alt="step img">
+                        </div>
+
+                    </div>
+                    <!-- //step3 -->
+                </div>
+            </div>
+        </section>
+
+
+        <section class="story">
+            <div class="container container-wide">
+                <div class="story-row">
+
+                    <div class="story-content">
+                        <h2 class="story-heading">
+                            Let's hear about Kayla's success story
+                        </h2>
+                        <div class="story-text">See how well Alivio works in a real customer’s life. </div>
+                        <div class="story-btn">
+                            <a href="#" class="button btn-big">Let’s get started</a>
+                        </div>
+
+                    </div>
+                    <div class="story-video">
+                                                
+                        <!-- <img src="../alivio-html-project/img/story/video-cover.jpg" alt="video"
+                            class="story-video-object"> -->
+
+                        <!-- размещаем видео -->
+
+                        <video class="story-video-object" id="video-story">
+                            <source src="../alivio-html-project/video/customer-story.mp4" type="video/mp4">
+                        </video>
+
+                        <div id="video-story-overlay" class="story-video-overlay">
+                            <button id="video-story-btn" class="story-video-btn">
+                                <img id="video-story-btn-icon" width="82" height="82" src="../alivio-html-project/img/story/play-white.svg" alt="play">
+                            </button>
+                        </div>
+
+                    </div>
+                    <!-- story video /// -->
+                </div>
+            </div>
+        </section>
+
+        <section class="product">
+            <div class="container">
+                <div class="product-row">
+                    <div class="product-img-wrapper">
+                        <img src="../alivio-html-project/img/product/photo.jpg" alt="photo" class="product-img">
+
+                        <div class="product-card">
+                            <div class="card">
+                                <h3 class="card-title">Customized For</h3>
+
+                                <div class="card-avatar">
+                                    <div class="avatar">
+                                        <img class="avatar-img" src="../alivio-html-project/img/product/avatar.jpg"
+                                            alt="avatar">
+                                        <h4 class="avatar-name">Mikayla</h4>
+                                    </div>
+                                </div>
+
+                                <div class="card-contents">
+                                    <h3 class="card-contents-title">Your custom contents</h3>
+                                    <ul>
+                                        <li>Understand Your Stress</li>
+                                        <li>Anger Management</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-content-title">Our product</h2>
+                        <h3 class="product-content-subtitle">You tell us your stress, We make your diary</h3>
+
+                        <div class="product-content-text">
+                            <p>Everyone experiences it, and in different ways. Let Alivio guide you, in a personalized
+                                journal experience, to overcome your stress.</p>
+                        </div>
+
+                        <div class="product-content-btn">
+                            <a href="#" class="button btn-big">Find Your Way</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img class="footer-logo" src="../alivio-html-project/img/footer-logo.svg" alt="footer-logo">
+
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#">Why Alivio</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../alivio-html-project/js/main.js"></script>
+</body>
+
+</html>
